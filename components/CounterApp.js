@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import PropType from 'prop-types';
-import { Title } from 'react-native-paper';
-import { Text, Fragment } from 'react-native';
+import { Text, View, Button } from 'react-native';
 
   const CounterApp = ({value = 0}) => { 
    const [ counter, setCounter ] = useState(value);
@@ -23,13 +22,13 @@ import { Text, Fragment } from 'react-native';
 } 
 
    return( 
-     <Fragment style = {styles.container}>  
-        <Title>CounterApp</Title>
+     <View>  
+        <Text>CounterApp</Text>
         <Text>{ counter }</Text>
-        <Button title="-" disabled onPress={ handleSus }/>
-        <Button title="Reset" disabled onPress={ handleReset }/>
-        <Button title="+" disabled onPress={ handleAdd }/>
-     </Fragment>
+        <Button title="-"  onPress={ handleSus }/>
+        <Button title="Reset"  onPress={ handleReset }/>
+        <Button title="+" onPress={ handleAdd }/>
+     </View>
   
    );
 } 
